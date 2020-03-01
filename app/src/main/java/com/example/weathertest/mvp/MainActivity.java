@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
         MySQLiteHelper db = new MySQLiteHelper(getApplicationContext());
 
-        Log.d(TAG, "db.getAll_1");
+
         states.clear();
         int count = db.getAllCount();
         if (count!=0) {
@@ -120,14 +120,14 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
 
                     for (int i = 0; i < cities.size(); i++) {
-                        Log.d(TAG, "db.getAll_6"+cities.get(i).getMain().getTemp());
+
                         states.add(new Cities(cities.get(i).getName(), cities.get(i).getWeather().get(0).getIcon(),cities.get(i).getMain().getTemp(),  cities.get(i).getMain().getFeelsLike(), cities.get(i).getWeather().get(0).getDescription(),  cities.get(i).getMain().getPressure(), cities.get(i).getMain().getHumidity(), cities.get(i).getWind().getSpeed(),i));
                     }
 
 
 
         mPresenter.onButtonWasClicked2(cities,MainActivity.this);
-        Log.d(TAG, "db.getAll_3");
+
 
 
         setInitialData();
