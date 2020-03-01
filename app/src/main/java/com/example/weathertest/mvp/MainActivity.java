@@ -58,14 +58,14 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         mSwipeRefreshLayout =  findViewById(R.id.refresh);
         mSwipeRefreshLayout.setOnRefreshListener(this);
         mSwipeRefreshLayout.setColorSchemeColors(R.color.colorPrimary);
-        Log.d(TAG, "onCreate");
+       // Log.d(TAG, "onCreate");
 
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart()");
+       // Log.d(TAG, "onStart()");
         mPresenter.subscribe();
 
     }
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop()");
+      //  Log.d(TAG, "onStop()");
         mPresenter.unsubscribe(isFinishing());
     }
 
@@ -138,13 +138,13 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     public void onResume() {
         super.onResume();
         mPresenter.onButtonWasClicked();
-        Log.d(TAG, "onResume()");
+       //Log.d(TAG, "onResume()");
 
     }
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy()");
+      //  Log.d(TAG, "onDestroy()");
 
     }
     private void resolveDependencies() {
@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                  Log.d(TAG, "search_query " + query);
+               //   Log.d(TAG, "search_query " + query);
 
                 setInitialData3(query);
 
@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                 Log.d(TAG, "search_query "+newText);
+              //   Log.d(TAG, "search_query "+newText);
                 setInitialData3(newText);
                 return false;
             }
