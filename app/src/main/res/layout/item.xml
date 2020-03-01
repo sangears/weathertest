@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/fond"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:background="@color/colorPrimary"
+
+
+    >
+    <RelativeLayout
+        android:id="@+id/detail_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+  >
+        <View
+            android:id="@+id/view22"
+            android:layout_width="wrap_content"
+            android:layout_height="1.5dp"
+            android:background="@color/white"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <TextView
+                android:id="@+id/citys_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:scaleType="center"
+                android:textSize="18sp"
+
+                card_view:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/citys_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:contentDescription="@null"
+                />
+
+            <TextView
+                android:id="@+id/citys_temp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:scaleType="center"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                card_view:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
