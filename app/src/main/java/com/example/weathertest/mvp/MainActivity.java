@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         mSwipeRefreshLayout.setOnRefreshListener(this);
         mSwipeRefreshLayout.setColorSchemeColors(R.color.colorPrimary);
         Log.d(TAG, "onCreate");
-        mPresenter.onButtonWasClicked();
+
     }
 
     @Override
@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     @Override
     public void onResume() {
         super.onResume();
+        mPresenter.onButtonWasClicked();
         Log.d(TAG, "onResume()");
 
     }
