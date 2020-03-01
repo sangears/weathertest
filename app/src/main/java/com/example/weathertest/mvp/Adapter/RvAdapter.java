@@ -141,12 +141,15 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.PersonViewHolder> 
     public int getItemCount() {
         //if(states==null) return 0;
         return states.size();
-        // return states.size();
+
     }
 
     public String TempUpper(String temp){
-        String[] val=temp.split("\\.");
-        if (val[0].contains("-")){temp=val[0]+"°";} else {temp="+"+val[0]+"°";}
+
+        double result = Double.parseDouble(temp);
+        long temp2=Math.round(result);
+        if (temp2>0){temp="+"+temp2+"°";} else {temp=temp2+"°";}
+
         return temp;
     }
 
